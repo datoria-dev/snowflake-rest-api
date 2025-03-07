@@ -28,9 +28,7 @@ object StreamSourceStage {
     }
   }
   given decoderStreamSourceStage: Decoder[StreamSourceStage] = Decoder.instance { c =>
-    for {
-    } yield StreamSourceStage(
-    )
+    Right(StreamSourceStage())
   }
 }
 

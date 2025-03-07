@@ -29,9 +29,7 @@ object PrimaryKey {
     }
   }
   given decoderPrimaryKey: Decoder[PrimaryKey] = Decoder.instance { c =>
-    for {
-    } yield PrimaryKey(
-    )
+    Right(PrimaryKey())
   }
 }
 

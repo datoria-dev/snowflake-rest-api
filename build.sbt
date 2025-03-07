@@ -1,21 +1,14 @@
 scalaVersion := "3.6.2"
 
-version := "1.0.0"
-name := "scala-http4s-client"
-organization := "org.openapitools"
-
-val CirceVersion   = "0.14.10"
-val Http4sVersion  = "0.23.30"
+// our major version, plus spec version. makes us able to invalidate the whole thing on encoding changes
+version := "1.0.8.40"
+name := "snowflake-rest-api"
+organization := "no.datoria"
 
 libraryDependencies ++= Seq(
-  "org.http4s"   %% "http4s-ember-client" % Http4sVersion,
-  "org.http4s"   %% "http4s-circe"        % Http4sVersion,
-  "org.http4s"   %% "http4s-dsl"          % Http4sVersion,
-  "org.http4s"   %% "http4s-client"       % Http4sVersion,
-  "io.circe" %% "circe-core"    % CirceVersion,
-  "io.circe" %% "circe-generic" % CirceVersion,
-  "io.circe" %% "circe-parser"  % CirceVersion,
-  "org.scalatest" %% "scalatest"  % "3.2.19"   % "test"
+  "org.http4s"   %% "http4s-circe" % "0.23.30",
+  "org.http4s"   %% "http4s-client" % "0.23.30",
+  "io.circe"     %% "circe-parser" % "0.14.10",
 )
 
 scalacOptions := Seq(
@@ -24,11 +17,5 @@ scalacOptions := Seq(
   "-deprecation",
   "-unchecked",
   "-feature",
-  "-language:existentials,experimental.macros,higherKinds,implicitConversions,postfixOps,adhocExtensions",
-  "-Yretain-trees",
-  "-Xmax-inlines:100",
-  "-Ykind-projector:underscores",
-  "-source:future"
+  "-source:3.7"
 )
-
-Compile / publishArtifact := false

@@ -28,9 +28,7 @@ object SQLFunction {
     }
   }
   given decoderSQLFunction: Decoder[SQLFunction] = Decoder.instance { c =>
-    for {
-    } yield SQLFunction(
-    )
+    Right(SQLFunction())
   }
 }
 

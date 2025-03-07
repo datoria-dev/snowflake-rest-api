@@ -21,7 +21,7 @@ enum TableKind(val value: String) {
   case PERMANENT extends TableKind("PERMANENT")
   case `TRANSIENT` extends TableKind("TRANSIENT")
   case TEMPORARY extends TableKind("TEMPORARY")
-  case `` extends TableKind("")
+  case empty extends TableKind("")
   case `Transient` extends TableKind("transient")
   case Temporary extends TableKind("temporary")
 }

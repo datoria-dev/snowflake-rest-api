@@ -28,9 +28,7 @@ object DownstreamLag {
     }
   }
   given decoderDownstreamLag: Decoder[DownstreamLag] = Decoder.instance { c =>
-    for {
-    } yield DownstreamLag(
-    )
+    Right(DownstreamLag())
   }
 }
 

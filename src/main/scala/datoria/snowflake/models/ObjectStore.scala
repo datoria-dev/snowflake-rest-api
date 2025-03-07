@@ -28,9 +28,7 @@ object ObjectStore {
     }
   }
   given decoderObjectStore: Decoder[ObjectStore] = Decoder.instance { c =>
-    for {
-    } yield ObjectStore(
-    )
+    Right(ObjectStore())
   }
 }
 

@@ -28,9 +28,7 @@ object JavaScriptFunction {
     }
   }
   given decoderJavaScriptFunction: Decoder[JavaScriptFunction] = Decoder.instance { c =>
-    for {
-    } yield JavaScriptFunction(
-    )
+    Right(JavaScriptFunction())
   }
 }
 

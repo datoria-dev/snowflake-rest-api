@@ -29,9 +29,7 @@ object UniqueKey {
     }
   }
   given decoderUniqueKey: Decoder[UniqueKey] = Decoder.instance { c =>
-    for {
-    } yield UniqueKey(
-    )
+    Right(UniqueKey())
   }
 }
 
